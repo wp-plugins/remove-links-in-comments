@@ -9,7 +9,7 @@ A very simple plugin that prevents Wordpress from automatically creating hyperli
 
 == Description ==
 
-By using this plugin you can stop Wordpress from automatically creating hyperlinks from links in your visitors comments. There may be several reasons for doing so but the main purpose for my client was to stop all outgoing links he could control.
+By using this plugin you can stop Wordpress from automatically creating hyperlinks from links in your visitors comments. There may be several reasons for doing so but the main purpose for my client was to stop all outgoing links he could not control.
 
 Since this plugin only effects your output your visitors links will show up as normal hyperlinks as soon as you deactivate this plugin.
 
