@@ -1,16 +1,20 @@
 <?php
 /*
 Plugin Name: Remove Links in Comments
-Plugin URI: http://ducedo.com/remove-links-in-comments/
+Plugin URI: http://www.stefannilsson.com/remove-links-in-comments/
 Description: Deactivate hyperlinks in comments.
-Version: 1.0
+Version: 1.1
 Author: Stefan Nilsson
-Author URI: http://ducedo.com/
-Min WP Version: 2.8
-Max WP Version: 2.8.6
-Update Server: http://wordpress.org/extend/plugins/remove-links-in-comments/
+Author URI: http://www.stefannilsson.com/
 */
 
-remove_filter('comment_text', 'make_clickable', 9);
+function remove_links($string = '') {
+	$link_pattern = "/<a[^>]*>(.*)<\/a>/iU";
+	$string = preg_replace($link_pattern, "$1", $string);
+
+	return $string;
+}
+
+add_filter('comment_text', 'remove_links');
 
 ?>
